@@ -14,8 +14,7 @@ import click
 @click.option('--pg-port', default=5432, type=int, help='PostgreSQL port')
 @click.option('--pg-db', default='ny_taxi', help='PostgreSQL database name')
 @click.option('--target-table', default='yellow_taxi_data', help='Target table name')
-@click.option('--url', help='URL of the CSV file')
-def main(pg_user, pg_pass, pg_host, pg_port, pg_db, target_table, url):
+def run(pg_user, pg_pass, pg_host, pg_port, pg_db, target_table):
     """
     Ingest CSV data into a PostgreSQL database.
     """
@@ -94,4 +93,4 @@ def main(pg_user, pg_pass, pg_host, pg_port, pg_db, target_table, url):
 
 
 if __name__ == '__main__':
-    main()
+    run()
